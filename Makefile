@@ -1,3 +1,6 @@
+clean:
+	rm -rf download
+	rm -rf base
 
 download/base_pack.zip:
 	rm -rf download
