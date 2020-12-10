@@ -15,3 +15,6 @@ base: download/base_pack.zip
 	rm -rf base
 	mkdir -p base
 	unzip download/base_pack.zip -d base
+
+install_requirements: requirements.txt
+	pip3 install -U -r requirements.txt
