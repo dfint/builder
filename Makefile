@@ -2,11 +2,14 @@ clean:
 	rm -rf download
 	rm -rf base
 
+# download/base_pack.zip: base_pack_url.txt
 download/base_pack.zip:
-	rm -rf download
 	mkdir -p download
-	cd download && wget http://df.wicked-code.com/PeridexisErrant%27s%20Starter%20Pack%200.47.04-r06.zip
+	rm download/*.zip || true
+	cd download && wget -i ../base_pack_url.txt
 	mv download/*.zip download/base_pack.zip
+
+download: download/base_pack.zip
 
 base: download/base_pack.zip
 	rm -rf base
