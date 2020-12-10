@@ -17,4 +17,7 @@ base: download/base_pack.zip
 	unzip download/base_pack.zip -d base
 
 install_requirements: requirements.txt
+	pip3 install -r requirements.txt
+
+update_requirements: requirements.txt
 	pip3 install -U -r requirements.txt
