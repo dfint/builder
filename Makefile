@@ -2,12 +2,12 @@ clean:
 	rm -rf download
 	rm -rf base
 
-# download/base_pack.zip: base_pack_url.txt
-download/base_pack.zip:
+download/base_pack.zip: base_pack_url.txt
 	mkdir -p download
 	rm download/*.zip || true
 	cd download && wget -i ../base_pack_url.txt
 	mv download/*.zip download/base_pack.zip
+	touch download/base_pack.zip
 
 download: download/base_pack.zip
 
