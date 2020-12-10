@@ -1,3 +1,5 @@
+.PHONY: clean download base install_requirements update_requirements
+
 clean:
 	rm -rf download
 	rm -rf base
