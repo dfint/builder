@@ -1,3 +1,3 @@
 # builder
 
-An attempt to automate building of a translated Dwarf Fortress package
+An attempt to automate the building of a translated Dwarf Fortress package
