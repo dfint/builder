@@ -7,7 +7,7 @@ clean:
 base_pack.zip: base_pack_url.txt
 	mkdir -p download
 	rm base_pack.zip || true
-	cd wget -i base_pack_url.txt -O base_pack.zip
+	wget -i base_pack_url.txt -O base_pack.zip
 	touch base_pack.zip
 
 download: base_pack.zip

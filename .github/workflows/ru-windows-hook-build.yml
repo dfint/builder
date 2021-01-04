@@ -26,9 +26,7 @@ jobs:
             ${{ runner.os }}-
       
       - name: Download base package
-        uses: wei/wget@v1
-        with:
-          args: -i base_pack_url.txt -O base_pack.zip
+        run: make download
 
       - name: Unpack base package
         run: |
