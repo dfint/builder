@@ -23,8 +23,16 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       
+      - name: Install wget
+      
       - name: Download base pack
-        run: make download
+        uses: wei/wget@v1
+        with:
+          args: -i base_pack_url.txt -O base_pack.zip
+        run: |
+          mkdir -p download
+          mv base_pack.zip download/base_pack.zip
+          touch download/base_pack.zip
 
       - name: Install python requirements
         run: make install_requirements
