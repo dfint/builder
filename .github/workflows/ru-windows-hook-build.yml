@@ -15,6 +15,8 @@ jobs:
 
       - name: Cache base package
         uses: actions/cache@v2
+        env:
+          cache-name: cache-base-pack
         with:
           path: base_pack.zip
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('base_pack_url.txt') }}
@@ -22,8 +24,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      
-      - name: Install wget
       
       - name: Download base package
         uses: wei/wget@v1
