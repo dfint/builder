@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache base pack
+      - name: Cache base package
         uses: actions/cache@v2
         with:
-          path: download
+          path: base_pack.zip
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('base_pack_url.txt') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -25,14 +25,15 @@ jobs:
       
       - name: Install wget
       
-      - name: Download base pack
+      - name: Download base package
         uses: wei/wget@v1
         with:
           args: -i base_pack_url.txt -O base_pack.zip
+
+      - name: Unpack base package
         run: |
-          mkdir -p download
-          mv base_pack.zip download/base_pack.zip
-          touch download/base_pack.zip
+          touch base_pack.zip
+          make base
 
       - name: Install python requirements
         run: make install_requirements
