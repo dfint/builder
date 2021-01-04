@@ -17,6 +17,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: download
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('base_pack_url.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
       
       - name: Download base pack
         run: make download
