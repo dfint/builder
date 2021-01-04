@@ -1,4 +1,3 @@
-python-transifex @ https://github.com/insolor/python-transifex/archive/master.zip
 dfrus @ https://github.com/dfint/dfrus/archive/develop.zip
 df-gettext-toolkit @ https://github.com/dfint/df-gettext-toolkit/archive/develop.zip
 df-raw-decoder @ https://github.com/dfint/df_raw_decoder/archive/master.zip
