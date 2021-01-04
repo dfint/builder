@@ -34,7 +34,9 @@ jobs:
           make base
 
       - name: Install python requirements
-        run: make install_requirements
+        run: |
+          python3 -m pip install -U pip
+          make install_requirements
 
       - name: Run a multi-line script
         run: |
