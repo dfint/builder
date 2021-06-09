@@ -1,12 +1,12 @@
 .PHONY: clean download base install_requirements update_requirements
 
 clean:
+	rm base_pack.zip || true
 	rm -rf download
 	rm -rf base
 
 base_pack.zip: base_pack_url.txt
 	mkdir -p download
-	rm base_pack.zip || true
 	wget -i base_pack_url.txt -O base_pack.zip --progress=dot:giga
 	touch base_pack.zip
 

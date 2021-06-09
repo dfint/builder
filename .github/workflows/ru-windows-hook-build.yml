@@ -25,9 +25,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      
-      - name: Download base package
-        run: make download
 
       - name: Unpack base package
         run: |
