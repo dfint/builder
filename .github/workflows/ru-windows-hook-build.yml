@@ -39,8 +39,3 @@ jobs:
           sudo apt install python3-setuptools
           python3 -m pip install -U pip
           make install_requirements
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
