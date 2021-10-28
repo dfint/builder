@@ -7,7 +7,8 @@ clean:
 
 base_pack.zip: base_pack_url.txt
 	mkdir -p download
-	wget -i base_pack_url.txt -O base_pack.zip --progress=dot:giga
+	# wget -i base_pack_url.txt -O base_pack.zip --progress=dot:giga
+	xargs -n 1 curl -o base_pack.zip -O < base_pack_url.txt
 	touch base_pack.zip
 
 download: base_pack.zip
