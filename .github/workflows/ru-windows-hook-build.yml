@@ -25,10 +25,11 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+        run: |
+          touch base_pack.zip
 
       - name: Unpack base package
         run: |
-          touch base_pack.zip
           make base
 
       - name: Install python requirements
