@@ -12,7 +12,7 @@ TODO:
 
 - [ ] Download translations from transifex
 
-- [ ] Apply patch to the `Dwarf Fortress.exe`
+- [ ] Patch `Dwarf Fortress.exe` (with dfrus, dfrus64 or df-translate-hook)
 
 - [ ] Apply translations to other files
 
