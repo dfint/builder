@@ -20,6 +20,8 @@ TODO:
 
 - [ ] Change configuration in the `init.txt` files
 
+- [ ] Add custom localized graphic font
+
 - [ ] Create package, upload to some hosting or to releases
 
   - [ ] Pack
