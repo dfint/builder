@@ -6,6 +6,8 @@ TODO:
 
 - [x] Download base package (eg. original game archive or LNP)
 
+  - [x] Download
+
   - [x] Unpack
 
 - [ ] Download translations from transifex
