@@ -22,7 +22,7 @@ TODO:
 
 - [ ] Add custom localized graphic font
 
-- [ ] Create package, upload to some hosting or to releases
+- [ ] Create a package, upload it to some hosting or to releases
 
   - [ ] Pack
 
