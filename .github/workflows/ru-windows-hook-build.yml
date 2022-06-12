@@ -1,10 +1,10 @@
 name: Russian, Windows, df-translate-hook
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  # push:
+  #   branches: [ master ]
+  # pull_request:
+  #  branches: [ master ]
   workflow_dispatch:
 
 jobs:
